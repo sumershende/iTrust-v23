@@ -147,7 +147,7 @@ private OfficeVisitController ovc;
 			OfficeVisit temp = all.get(o);
 			boolean dateBool = (temp.getDate().equals(sharedVisit.getDate()));
 			boolean locBool = (temp.getLocationID().equals(sharedVisit.getLocationID()));
-			boolean midBool = (temp.getPatientMID() == sharedVisit.getPatientMID());
+			boolean midBool = (temp.getPatientMID().equals(sharedVisit.getPatientMID()));
 			boolean notesBool = (temp.getNotes().equals(sharedVisit.getNotes()));
 			if(!notesBool){
 				if((temp.getNotes() ==null) && (sharedVisit.getNotes() == null)){
@@ -185,7 +185,7 @@ private OfficeVisitController ovc;
 				boolean bDate = (formatDate.equals(date));
 				boolean bLoc = (hospBean.getHospitalName(o.getLocationID()).equals(loc)) ;
 				boolean bApptType = (atBean.getApptTypeName(o.getApptTypeID()).equals(apptType));
-				boolean bPatient = (o.getPatientMID() == patientData.patientID);
+				boolean bPatient = (o.getPatientMID().equals(patientData.patientID));
 				if(bDate && bLoc && bApptType && bPatient){
 					retval = true;
 					break;
@@ -267,7 +267,7 @@ private OfficeVisitController ovc;
 				boolean bDate = (formatDate.equals(date));
 				boolean bLoc = (hospBean.getHospitalName(o.getLocationID()).equals(loc)) ;
 				boolean bApptType = (atBean.getApptTypeName(o.getApptTypeID()).equals(apptType));
-				boolean bPatient = (o.getPatientMID() == patientData.patientID);
+				boolean bPatient = (o.getPatientMID().equals(patientData.patientID));
 				boolean bNotes = (o.getNotes().equals(notes));
 				boolean bSendBill = (o.getSendBill() == sendBill);
 				if(bDate && bLoc && bApptType && bPatient && bNotes && bSendBill){
@@ -308,7 +308,7 @@ private OfficeVisitController ovc;
 				boolean bDate = (formatDate.equals(date));
 				boolean bLoc = (hospBean.getHospitalName(o.getLocationID()).equals(loc)) ;
 				boolean bApptType = (atBean.getApptTypeName(o.getApptTypeID()).equals(apptType));
-				boolean bPatient = (o.getPatientMID() == patientData.patientID);
+				boolean bPatient = (o.getPatientMID().equals(patientData.patientID));
 				boolean bNotes = (o.getNotes().equals(notes));
 				boolean bSendBill = (o.getSendBill() == sendBill);
 				if(bDate && bLoc && bApptType && bPatient && bNotes && bSendBill){

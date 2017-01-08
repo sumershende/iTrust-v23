@@ -235,7 +235,7 @@ public class ViewHealthInfoStepDefs {
 		if (sharedVisit == null) {
 			return;
 		}
-		assertEquals(height, sharedVisit.getHeight());
+		assertEquals(height, sharedVisit.getHeight().toString());
 	}
 
 	@Then("^the above office visit \\(if exists\\) contains (\\S+) as the blood_pressure of the above records table \\(if visible\\)$")

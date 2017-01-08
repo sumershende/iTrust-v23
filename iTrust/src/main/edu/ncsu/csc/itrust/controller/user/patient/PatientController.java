@@ -35,7 +35,7 @@ public class PatientController extends UserController implements Serializable{
 		catch(NumberFormatException ne){
 			return false;
 		}
-		user = patientData.getByID(id);
+		if(null!=patientData)user = patientData.getByID(id);
 		if(!(user == null)){
 				return true;
 		}
